@@ -5,7 +5,7 @@ category: 技术
 comments: true
 ---
 
-====== docker编排 ======
+#### docker编排 #### 
 
 ---------------
   * 概念
@@ -17,27 +17,27 @@ comments: true
 
 
 
-===== 概念 =====
+#### 概念 ####
 
-=== 什么是docker编排? ===
+### 什么是docker编排? ###
 docker编排是指容器调度、集群管理和可能其他主机供应配置。
 
-==== docker编排优点 ====
+### docker编排优点 ###
 能够让安装和配置主机服务器的程序实现自动化
 
-==== docker compose mode ===
+### docker compose mode ###
 natively managing a cluster of Docker Engines called a swarm
 
 ------------------------------------
 
-===== 编排工具 =====
+#### 编排工具 ####
 
-=== 安装 ===
+### 安装 ###
 安装1.13版本的docker
 
-''curl -fsSL https://get.docker.com/| sh '' 
+'curl -fsSL https://get.docker.com/| sh ' 
 
-=== swarm集群配置 ===
+### swarm集群配置 ###
 
 docker swarm init
 
@@ -53,7 +53,7 @@ docker swarm init
 
 ------------------------------------
 
-===== swarm deploy app=====
+#### swarm deploy app ####
 
 docker-compose.yml
 
@@ -92,7 +92,7 @@ docker-compose.yml
          frontend:
          backend:
 
-==== 详解 ====
+#### 详解 ####
  
 
 ------------------------------------
