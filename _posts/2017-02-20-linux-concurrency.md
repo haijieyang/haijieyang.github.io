@@ -1,18 +1,19 @@
----
-layout: post
-title: docker 集群
-category: 技术
+
+layout: post  
+title: docker 集群  
+category: 技术  
 comments: true
----
+
 
 #### docker编排 
-
----------------
+---
   * 概念
   * 实例
   * 安装
   * 运行
-  * 缺点
+  * 缺点  
+  
+---
 
 #### 概念 
 
@@ -114,3 +115,4 @@ docker-compose.yml
 ### 缺点 
 
 查看日志很麻烦,docker service ps 查看各个容器都在哪些节点上，然后再一个个进去先 docker ps 找到容器 ID，然后在 docker logs <容器ID> 查看具体日志。非常繁琐
+
