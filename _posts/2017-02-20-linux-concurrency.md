@@ -102,17 +102,15 @@ docker-compose.yml
 
 ### 创建 
 
-``docker stack deploy --compose-file  docker-compose.yml lnmp``
+```docker stack deploy --compose-file  docker-compose.yml lnmp```
 
 ### 滚动升级 
 
-''docker service update --update-parallelism  --update-delay --image tomcat:7 tomcat00''
+```docker service update --update-parallelism  --update-delay --image tomcat:7 tomcat00```
 
 ### 版本回滚 
 
-''docker service update  --rollback --update-delay 0s  my_web''
-
-
+```docker service update  --rollback --update-delay 0s  my_web```
 
 
 
@@ -120,7 +118,7 @@ docker-compose.yml
 
 ------------------------------------
 
-===== 缺点 =====
+### 缺点 
 
 查看日志很麻烦,docker service ps 查看各个容器都在哪些节点上，然后再一个个进去先 docker ps 找到容器 ID，然后在 docker logs <容器ID> 查看具体日志。非常繁琐
 
