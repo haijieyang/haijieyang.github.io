@@ -34,7 +34,7 @@ natively managing a cluster of Docker Engines called a swarm
 ### 安装 
 安装1.13版本的docker
 
-```curl -fsSL https://get.docker.com/| sh```
+``curl -fsSL https://get.docker.com/| sh``
 
 ### swarm集群配置
 
