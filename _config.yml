@@ -43,12 +43,12 @@ timezone:      null
 
 
 #Site config
-title: Jekyll Theme
-description: Just another Jekyll theme design and code by zhanxin.info.
-keywords: Jekyll Theme
+title: yanghaijie
+description: haijieyang
+keywords: haijie
 url: /
 feed: /atom.xml
-favicon: http://jekyllrb.com/favicon.png
+favicon: http://haijieyang.github.io/favicon.png
 
 #Nav config
 nav:
@@ -116,7 +116,7 @@ disqus:
 #################################### global configure #######################################
 
 username: minixalpha
-baseurl: /StrayBirds
+baseurl: /
 markdown: redcarpet
 safe: false
 highlighter: pygments
