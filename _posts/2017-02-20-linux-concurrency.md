@@ -2,7 +2,7 @@
 layout: post
 title: docker swarm 集群实例
 category: swarm
-comments: true
+comments: false
 ---
 
 
