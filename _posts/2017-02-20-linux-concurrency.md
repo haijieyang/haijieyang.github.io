@@ -101,15 +101,15 @@ docker-compose.yml
 
 ### 创建 
 
-```docker stack deploy --compose-file  docker-compose.yml lnmp```
+    docker stack deploy --compose-file  docker-compose.yml lnmp
 
 ### 滚动升级 
 
-```docker service update --update-parallelism  --update-delay --image tomcat:7 tomcat00```
+    docker service update --update-parallelism  --update-delay --image tomcat:7 tomcat00
 
 ### 版本回滚 
 
-```docker service update  --rollback --update-delay 0s  my_web```
+    docker service update  --rollback --update-delay 0s  my_web
 
 ------------------------------------
 
