@@ -1,9 +1,9 @@
-
+---
 layout: post  
 title: docker 集群  
 category: 技术  
 comments: true
-
+---
 
 #### docker编排 
 ---
