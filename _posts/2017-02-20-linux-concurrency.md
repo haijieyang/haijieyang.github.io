@@ -35,7 +35,7 @@ natively managing a cluster of Docker Engines called a swarm
 ### 安装 
 安装1.13版本的docker
 
-`curl -fsSL https://get.docker.com/| sh`
+```curl -fsSL https://get.docker.com/| sh```
 
 ### swarm集群配置
 
@@ -112,19 +112,8 @@ docker-compose.yml
 
 ```docker service update  --rollback --update-delay 0s  my_web```
 
-
-
-
-
 ------------------------------------
 
 ### 缺点 
 
 查看日志很麻烦,docker service ps 查看各个容器都在哪些节点上，然后再一个个进去先 docker ps 找到容器 ID，然后在 docker logs <容器ID> 查看具体日志。非常繁琐
-
-
-
-
-
-
-
