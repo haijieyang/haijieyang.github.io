@@ -78,8 +78,8 @@ baseurl: ""
 markdown: redcarpet
 safe: false
 highlighter: pygments
-title: 飞鸟集
-description: 人生到处知何似，应似飞鸿踏雪泥
+title: 流星的记录
+description: 能力有限,努力无限
 #theme: kunka
 theme: modernist
 disqusname: haijieyang
