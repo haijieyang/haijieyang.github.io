@@ -17,8 +17,9 @@ comments: false
 ---
 
 ### 安装 ss
+```
 sudo pip install shadowsocks
-
+```
 ### 添加配置 config.json
     {
      "server": serverip,
