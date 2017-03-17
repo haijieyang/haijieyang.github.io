@@ -50,7 +50,9 @@ make install
 ```
 
 ### 修改配置文件
-
+```
+cp ./src/proxychains.conf  /usr/local/etc
+```
 ```
  [ProxyList]
 socks5 127.0.0.1  1080
