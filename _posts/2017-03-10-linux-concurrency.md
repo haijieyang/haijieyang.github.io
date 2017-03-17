@@ -93,3 +93,9 @@ listen-address 127.0.0.1:8118
 ```
 sudo service privoxy restart
 ```
+
+### 使用privoxy
+```
+export http_proxy='http://localhost:8118'
+export https_proxy='http://localhost:8118'
+```
