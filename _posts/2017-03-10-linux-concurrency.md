@@ -13,6 +13,8 @@ comments: false
   * 安装 proxychains-ng
   * 配置 proxychains  
   * 使用代理下载
+  * 安装Privoxy
+  * sock5代理映射为http代理
   
 ---
 
@@ -73,8 +75,21 @@ socks5 127.0.0.1  1080
 
 ------------------------------------
 
-### 注意点
+### 安装Privoxy
 
-ProxyList 列表尽量使用单代理
+```
+sudo apt-get install privoxy
+```
 
+### 修改配置文件
+/etc/privoxy/config
+```
+#listen-address  localhost:8118
+forward-socks5 / 127.0.0.1:1080 .
+listen-address 127.0.0.1:8118
+```
 
+### 启动Privoxy
+```
+sudo service privoxy restart
+```
