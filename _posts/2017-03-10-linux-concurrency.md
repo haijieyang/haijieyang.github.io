@@ -65,12 +65,12 @@ socks5 127.0.0.1  1080
 
 ### 测试
 ```
-    proxychains4  curl https://www.google.com
+proxychains4  curl https://www.google.com
 ```
 ### 使用代理
 
 ```
-    proxychains4 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.2.tar.gz
+proxychains4 wget https://artifacts.elastic.co/downloads/logstash/logstash-5.2.2.tar.gz
 ```
 
 ------------------------------------
