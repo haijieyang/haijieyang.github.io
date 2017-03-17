@@ -82,9 +82,7 @@ sudo apt-get install privoxy
 ```
 
 ### 修改配置文件
-```
 /etc/privoxy/config
-```
 ```
 #listen-address  localhost:8118
 forward-socks5 / 127.0.0.1:1080 .
