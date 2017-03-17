@@ -44,7 +44,7 @@ sslocal -c config.json  -d start
 ```
 git  clone https://github.com/rofl0r/proxychains-ng.git
 cd proxychains-ng
-./configure --sysconfdir=/usr/local/etc/
+./configure
 make
 make install
 ```
@@ -53,7 +53,7 @@ make install
 
 ```
  [ProxyList]
-socket5 127.0.0.1  1080
+socks5 127.0.0.1  1080
 ```
 ------------------------------------
 
