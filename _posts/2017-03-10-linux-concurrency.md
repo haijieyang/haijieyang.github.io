@@ -106,11 +106,13 @@ export https_proxy='http://localhost:8118'
 kubernetes创建服务时  
 gcr.io下的镜像拉取失败
 docker service加加载环境变量文件
+
 ```
 EnvironmentFile=-/opt/kubernetes/cfg/docker
 ```
 
 /opt/kubernetes/cfg/docker 追加这一行
+
 ```
 HTTP_PROXY=127.0.0.1:8118
 ```
