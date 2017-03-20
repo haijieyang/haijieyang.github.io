@@ -15,6 +15,7 @@ comments: false
   * 使用代理下载
   * 安装Privoxy
   * sock5代理映射为http代理
+  * docker pull 使用proxy
   
 ---
 
@@ -98,4 +99,18 @@ sudo service privoxy restart
 ```
 export http_proxy='http://localhost:8118'
 export https_proxy='http://localhost:8118'
+```
+
+------------------------------------
+### docker pull  proxy
+kubernetes创建服务时  
+gcr.io下的镜像拉取失败
+docker service加加载环境变量文件
+```
+EnvironmentFile=-/opt/kubernetes/cfg/docker
+```
+
+/opt/kubernetes/cfg/docker 追加这一行
+```
+HTTP_PROXY=127.0.0.1:8118
 ```
