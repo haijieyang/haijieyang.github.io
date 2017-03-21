@@ -21,7 +21,7 @@ comments: false
 
 ### 组件关系
 
-master 和node都需要安装etcd flannel
+###### master 和node都需要安装etcd flannel
 
 master | node |   all   
 ---|---|---
