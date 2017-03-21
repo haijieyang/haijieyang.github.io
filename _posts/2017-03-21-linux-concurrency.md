@@ -24,9 +24,10 @@ comments: false
 ###### master 和node都需要安装etcd flannel
 
     master          | node    |   all   
+    ----------------------------------
     apiserver       | kubelet | etcd
     control-manager | proxy   | flannel  
-    scheduler       | 
+    scheduler       |         |
 
 ---
 
