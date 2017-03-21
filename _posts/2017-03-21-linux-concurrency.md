@@ -21,14 +21,11 @@ comments: false
 
 ### 组件关系
 
-###### master 和node都需要安装etcd flannel
-
-    master          | node    |   all   
-    ----------------------------------
-    apiserver       | kubelet | etcd
-    control-manager | proxy   | flannel  
-    scheduler       |         |
-
+```
+master 需安装 apiserver control-manager scheduler
+node   需安装 kubelet proxy 
+all    需要装 etcd flannel
+```
 ---
 
 ### 克隆kubernetes仓库
@@ -59,11 +56,6 @@ cp binary/master/bin/* /opt/kubernetes/bin/
 
 ### 安装etcd
 
-###### 使用脚本安装
-```
-cd kubernetes/cluster/centos/master/scripts
-sudo sh etcd.sh
-```
 ###### 修改etcd.sh
 
 ```
@@ -75,14 +67,16 @@ ETCD_INITIAL_CLUSTER=${3:-}
 
 ```
 
+
+###### 使用脚本安装
+```
+cd kubernetes/cluster/centos/master/scripts
+sudo sh etcd.sh
+```
+
 ------------------------------------
 
-###### 安装flannel
-
-```
-sudo sh flannel.sh
-```
-
+### 安装flannel
 ###### 修改flannel.sh
 
 ```
@@ -90,5 +84,10 @@ ETCD_SERVERS=${1:-"http://8.8.8.18:4001"}
 #mater修改成ETCD_SERVERS=${1:-"http://192.168.152.179:4001"}
 #node 修改成ETCD_SERVERS=${1:-"http://192.168.152.180:4001"}
 ```
+###### 执行脚本flannel.sh
+```
+sudo sh flannel.sh
+```
+
 
 
