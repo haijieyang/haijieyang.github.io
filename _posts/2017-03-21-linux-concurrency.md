@@ -115,7 +115,6 @@ sudo sh scheduler.sh
 ###### 执行脚本安装
 ```
 sudo sh docker.sh
-sudo sh flannel.sh
 sudo sh kubelet.sh
 sudo sh proxy.sh
 # 执行脚本前需执行以下步骤
