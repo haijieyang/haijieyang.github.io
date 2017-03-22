@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 安装k8s
+title: k8s 学习篇一
 category: k8s
 comments: false
 ---
 
 
-#### centos 安装k8s
+## k8s 集群安装
 ---
   * 组件关系
   * 克隆kubernetes仓库
@@ -15,7 +15,9 @@ comments: false
   * 安装flannel  
   * 安装master组件
   * 安装node组件
- 
+  * 制作证书
+  * master 组件安装
+  * slave 组件安装
   
 ---
 
@@ -99,6 +101,24 @@ openssl req -new -key server.key -subj "/CN=${MASTER_IP}" -out server.csr
 openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days 10000
 openssl x509 -noout -text -in ./server.crt
 ```
-
-
+---
+### master 节点安装组件
+###### 执行脚本安装
+```
+sudo sh apiserver.sh
+sudo sh controller-manager.sh
+sudo sh scheduler.sh
+# 需要修改 masterip 
+```
+---
+### slave 节点安装组件
+###### 执行脚本安装
+```
+sudo sh docker.sh
+sudo sh flannel.sh
+sudo sh kubelet.sh
+sudo sh proxy.sh
+# 执行脚本前需执行以下步骤
+cp -rf ./bin/docker* /usr/bin/
+```
 
