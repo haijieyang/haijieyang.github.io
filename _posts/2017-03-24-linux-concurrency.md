@@ -45,6 +45,7 @@ kubectl create -f skydns-svc.yaml.base
 
 ###### 测试dns 
 创建一个curl Pod
+
 ```
 apiVersion: V1
 kind: Pod
@@ -58,6 +59,7 @@ spec:
   - -c
   - while true; do sleep 1;done
 ```
+
 在curl-util Pod中通过Service名称访问 my-nginx:80
 ```
 kubectl exec curl-util -- curl -s my-nginx:80
