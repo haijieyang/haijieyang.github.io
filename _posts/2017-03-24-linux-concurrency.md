@@ -47,18 +47,20 @@ cd ./heapster/deploy/
 
 ```
 ###### 查看服务启动状态
-
-启动正常就能看到cpu memory的状态了
-
-
+```
+启动正常后几分钟就能看到cpu memory的状态了
+```
 ------------------------------------
 ### grafana添加datasource
-###### 访问地址
+###### grafana访问地址
 ```
 http://serverip:8080/api/v1/proxy/namespaces/kube-system/services/monitoring-grafana/
 ```
+
+###### 点击datasource
 ```
-#默认的influxDB
+type InfluxDB
+#添加influxdb的一些基本参数
 database k8s
 User root
 Password root
