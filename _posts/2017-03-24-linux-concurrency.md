@@ -1,68 +1,64 @@
 ---
 layout: post
-title: k8s 学习篇四
+title: k8s 学习篇三
 category: k8s
 comments: false
 ---
 
 
-## k8s 安装monitoring
+## k8s 安装skydns
 ---
-  * 克隆heapster仓库
+  * 声明环境变量
   * 修改配置文件
   * 启动服务
-  * grafana添加datasource
+  * 测试服务
 
   
 ---
 
-### 克隆仓库heapster
+### 声明环境变量
 
 ```
-git clone https://github.com/kubernetes/heapster
+export MASTER_IP=192.168.152.179
+export DNS_DOMAIN="cluster.local"
+export KUBE_APISERVER_URL=http://$MASTER_IP:8080
 ```
 ---
 
 ### 修改配置文件
-配置文件路径 ./heapster/deploy/kube-config/influxdb
-###### heapster-deployment.yaml
+文件路径 kubernetes/cluster/addons/dns
+###### skydns-rc.yaml.base skydns-svc.yaml.base
 ```
---source=kubernetes:http:
-修改成 --source=kubernetes:http://192.168.152.179:8080?inClusterConfig=false
-```
-###### grafana-deployment.yaml
-```
-value: /
-#修改成 value: /api/v1/proxy/namespaces/kube-system/services/monitoring-grafana/
+sed -i "s/__PILLAR__DNS__DOMAIN__/${DNS_DOMAIN}/g" skydns-rc.yaml.base
+sed -i "s~__PILLAR__FEDERATIONS__DOMAIN__MAP__~- --kube-master-url=${KUBE_APISERVER_URL}~g" skydns-rc.yaml.base
 ```
 
 ------------------------------------
 
 ### 启动服务
-###### 创建deployment
+###### 创建rc svc
+```
+kubectl create -f skydns-rc.yaml.base 
+kubectl create -f skydns-svc.yaml.base 
+```
+---
 
+###### 测试dns 
+创建一个curl Pod
 ```
-cd ./heapster/deploy/
-./kube.sh start
-
+apiVersion: V1
+kind: Pod
+metadata:
+  name: curl-util
+spec:
+  container:
+  - name: curl-util
+  command:
+  - sh
+  - -c
+  - while true; do sleep 1;done
 ```
-###### 查看服务启动状态
+在curl-util Pod中通过Service名称访问 my-nginx:80
 ```
-启动正常后几分钟就能看到cpu memory的状态了
+kubectl exec curl-util -- curl -s my-nginx:80
 ```
-------------------------------------
-### grafana添加datasource
-###### grafana访问地址
-```
-http://serverip:8080/api/v1/proxy/namespaces/kube-system/services/monitoring-grafana/
-```
-
-###### 点击datasource
-```
-type InfluxDB
-#添加influxdb的一些基本参数
-database k8s
-User root
-Password root
-```
-
