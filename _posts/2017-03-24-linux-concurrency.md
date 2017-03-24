@@ -61,6 +61,7 @@ spec:
 ```
 
 在curl-util Pod中通过Service名称访问 my-nginx:80
+
 ```
 kubectl exec curl-util -- curl -s my-nginx:80
 ```
