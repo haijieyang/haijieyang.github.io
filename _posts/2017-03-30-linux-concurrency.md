@@ -52,8 +52,9 @@ RestartSec=10
 WantedBy=multi-user.target
 ```
 
+```
 把<ETCD_IP>:<ETCD_PORT>替换成你的etcd 配置
-
+```
 ---
 
 ### 下载配置calico cni组件
@@ -91,7 +92,7 @@ EOF
 ```
 wget http://docs.projectcalico.org/v1.5/getting-started/kubernetes/installation/policy-controller.yaml
 ```
-######  修改<ETCD_ENDPOINTS>
+######  修改ETCD_ENDPOINTS
 
 
 ###### 通过kubectl启动policy-controller
@@ -118,6 +119,7 @@ KUBELET_ARGS="--network-plugin-dir=/etc/cni/net.d  --network-plugin=cni"
 ```
 
 /lib/systemd/system/kubelet.service
+
 ```
 [Unit]
 Description=Kubernetes Kubelet
@@ -147,12 +149,14 @@ WantedBy=multi-user.target
 ### 修改kube-proxy 启动参数
 
 /opt/kubernetes/cfg/kube-proxy
+
 ```
 # 增加以下参数
 KUBE_PROXY_ARGS=" --proxy-mode=iptables"
 ```
 
 /lib/systemd/system/kube-proxy.service
+
 ```
 [Unit]
 Description=Kubernetes Proxy
