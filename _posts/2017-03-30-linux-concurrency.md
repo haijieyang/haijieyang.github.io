@@ -114,6 +114,7 @@ kubectl get pods --namespace=kube-system
 ```
 
 /opt/kubernetes/cfg/kubelet
+
 ```
 KUBELET_ARGS="--network-plugin-dir=/etc/cni/net.d  --network-plugin=cni"
 ```
