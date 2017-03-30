@@ -13,7 +13,7 @@ comments: false
   * 安装calico network policy controller
   * 修改kubelet 启动参数
   * 修改 Kube-Proxy
-  
+  * 重置 calicoctl pool
   
 ---
 
@@ -174,4 +174,19 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
+```
+---
+### 重置calico  pool
+###### 删除默认calico pool
+```
+calicoctl pool remove 192.168.0.0/16
+```
+###### 添加calico pool
+```
+calicoctl pool add 10.0.238.0/24 --nat-outgoing --ipip  
+#添加新的IP资源池，支持跨子网的主机上的Docker间网络互通，需要添加--ipip参数；如果要Docker访问外网，需要添加--nat-outgoing参数
+```
+###### 查看calico pool
+```
+calicoctl pool show
 ```
