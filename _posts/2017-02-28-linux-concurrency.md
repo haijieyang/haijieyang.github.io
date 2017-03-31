@@ -8,10 +8,12 @@ comments: false
 
 ##  nginx四层负载均衡 
 ---
+
   * 编译nginx 
   * stream指令
   * upstream配置
   * server配置
+
 ---
 
 ### 编译nginx 
