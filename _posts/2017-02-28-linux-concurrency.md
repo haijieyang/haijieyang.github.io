@@ -22,7 +22,9 @@ comments: false
 ---
 
 ###### stream指令
+
 stream 是跟http同一级的
+
 ```
 stream {
     upstream mysql_backend {
@@ -47,7 +49,9 @@ upstream mysql_backend {
 }
 
 ```
+
 ---
+
 ### server 配置
 
 ```
