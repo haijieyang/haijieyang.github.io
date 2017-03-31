@@ -23,9 +23,9 @@ comments: false
 ```
 ---
 
-###### stream指令
+### stream指令
 
-stream 是跟http同一级的
+###### stream在nginx.conf中是跟http同一级的
 
 ```
 stream {
