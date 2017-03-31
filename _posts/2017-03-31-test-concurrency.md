@@ -6,11 +6,18 @@ comments: false
 ---
 <table border="1">
 <tr>
-<td>row 1, cell 1</td>
-<td>row 1, cell 2</td>
+<td>主机</td>
+<td>ip地址</td>
+<td>calico</td>
 </tr>
 <tr>
-<td></td>
-<td>row 2, cell 2</td>
+<td>k8s-master(master)</td>
+<td>192.168.152.179</td>
+<td>calicoctl(v0.22.0)</td>
+</tr>
+<tr>
+<td>k8s-slave(slave)</td>
+<td>192.168.152.180</td>
+<td>calicoctl(v0.22.0)</td>
 </tr>
 </table>
