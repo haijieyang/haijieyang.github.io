@@ -7,6 +7,7 @@ comments: false
 
   * packer
   * dockercook
+  
 ---
 
 ### packer 
@@ -50,8 +51,8 @@ docker_redis.json
     ]
 }
 
-#json文件分成3块 builders provisioners post-processors
-# builders时指定type为docker, 而 base image 为ubuntu。"commit":true指定需要运行docker commit， 由container生成image. provisioners将运行一个shell, 安装redis-server。 最后，在post-processors里为image 添加tag redis-test:packer
+json文件分成3块 builders provisioners post-processors
+builders时指定type为docker, 而 base image 为ubuntu。"commit":true指定需要运行docker commit， 由container生成image. provisioners将运行一个shell, 安装redis-server。 最后，在post-processors里为image 添加tag redis-test:packer
 ```
 
 ---
@@ -76,6 +77,7 @@ packer build docker_redis.json
 ###### dockercook install
 
 开启docker tcp通信端口
+
 ```
 /usr/bin/dockerd -H tcp://0.0.0.0:2375
 # export DOCKER_HOST="tcp://0.0.0.0:2375"
@@ -88,6 +90,7 @@ git clone https://github.com/factisresearch/dockercook.git && cd dockercook && s
 ###### dockercook syntax
 
 BranchA repo/package.json
+
 ```
 {
     "name": "sample-app",
@@ -103,6 +106,7 @@ BranchA repo/package.json
 
 
 repo/cookfiles/system.cook
+
 ```
 BASE DOCKER ubuntu:14.04
 BEGIN
@@ -114,6 +118,7 @@ COMMIT
 ```
 
 repo/cookfiles/node-pkg.cook
+
 ```
 BASE COOK system.cook
 INCLUDE package.json
@@ -123,6 +128,7 @@ RUN npm install
 ```
 
 repo/cookfiles/app.cook
+
 ```
 BASE COOK node-pkg.cook
 INCLUDE *.js
@@ -139,3 +145,7 @@ dockercook init
 git checkout  branchA
 dockercook cook cookfiles/app.cook
 ```
+
+
+
+
