@@ -52,7 +52,7 @@ docker_redis.json
 }
 
 json文件分成3块 builders provisioners post-processors
-builders时指定type为docker, 而 base image 为ubuntu。"commit":true指定需要运行docker commit， 由container生成image. provisioners将运行一个shell, 安装redis-server。 最后，在post-processors里为image 添加tag redis-test:packer
+builders时指定type为docker, 而 base image 为ubuntu。commit:true指定需要运行docker commit， 由container生成image. provisioners将运行一个shell, 安装redis-server。 最后，在post-processors里为image 添加tag redis-test:packer
 ```
 
 ---
