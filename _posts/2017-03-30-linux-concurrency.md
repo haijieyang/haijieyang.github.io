@@ -206,4 +206,5 @@ calicoctl pool add 10.0.238.0/24 --nat-outgoing --ipip
 ###### 查看calico pool
 ```
 calicoctl pool show
+calicoctl endpoint --detailed show
 ```
