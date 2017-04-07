@@ -1,6 +1,6 @@
 ---
 layout: post
-title: k8s ssl auth
+title: k8s学习篇六 
 category: k8s
 comments: false
 ---
