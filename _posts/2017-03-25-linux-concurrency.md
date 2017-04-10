@@ -50,7 +50,7 @@ cd ./heapster/deploy/
 ```
 启动正常后几分钟就能看到cpu memory的状态了
 ```
-![kubernetes-dashboard](https://github.com/haijieyang/haijieyang.github.io/blob/master/images/dashboard.png)
+![kubernetes-dashboard](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/dashboard.png)
 
 ------------------------------------
 ### grafana添加datasource
