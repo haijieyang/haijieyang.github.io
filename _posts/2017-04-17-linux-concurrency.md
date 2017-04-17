@@ -82,7 +82,6 @@ $COREOS_IPXE_SERVER_DATA_DIR/profiles/development.json
 export COREOS_IPXE_SERVER_BASE_URL="192.168.152.134:4777"
 ./coreos-ipxe-server
 ```
-![ipxe-layout](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/ipxe_start.png)
 
 ---
 
