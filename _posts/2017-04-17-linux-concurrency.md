@@ -80,9 +80,7 @@ $COREOS_IPXE_SERVER_DATA_DIR/profiles/development.json
 
 ###### 1.6 ipxe-server  layout
 
-```
 ![kubernetes-dashboard](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/ipxe.png)
-```
 
 ---
 
