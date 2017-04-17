@@ -15,7 +15,6 @@ comments: false
 
 ```
 curl -L https://github.com/kelseyhightower/coreos-ipxe-server/releases/download/v0.3.0/coreos-ipxe-server-0.3.0-linux-amd64 -o coreos-ipxe-server
-
 ```
 
 ###### 1.2 download coreos pxe image
