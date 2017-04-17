@@ -6,7 +6,7 @@ comments: false
 ---
 
   * installation
-  * vmware config
+  * vmware workstation config
   
 ---
 
@@ -77,8 +77,18 @@ $COREOS_IPXE_SERVER_DATA_DIR/profiles/development.json
 
 ---
 
+###### 1.6 Start ipxe sever
 
-###### 1.6 ipxe-server  layout
+```
+export COREOS_IPXE_SERVER_BASE_URL="192.168.152.134:4777"
+./coreos-ipxe-server
+```
+![ipxe-layout](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/ipxe_start.png)
+
+---
+
+###### 1.7 ipxe-server  layout
+
 
 ![ipxe-layout](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/ipxe.png)
 
