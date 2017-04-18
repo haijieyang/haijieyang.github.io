@@ -1,7 +1,7 @@
 ---
 layout: post
 title: coreos install by pxe
-category: coreos
+category: haijieyang.github.io/coreos
 comments: false
 ---
 
