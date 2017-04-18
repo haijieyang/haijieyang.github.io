@@ -5,7 +5,7 @@ category: coreos
 comments: false
 ---
 
-### Install coreos by PXE
+### install  coreos  by  PXE
 
 ---
 
@@ -32,6 +32,7 @@ disable = no
 ```
 
 base  syslinux image
+
 ```
 su -
 mkdir -p /tftpboot
@@ -183,7 +184,11 @@ subnet 192.168.152.0 netmask 255.255.255.0 {
 
 ###### 3.1 install  nginx
 
-```  yum install nginx -y```
+```  
+yum install nginx -y
+```
+
+
 
 ###### 3.2 nginx conf
 ```
