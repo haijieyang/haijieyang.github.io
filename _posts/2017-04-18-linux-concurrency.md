@@ -217,7 +217,9 @@ mkdir -p /www/work/coreos
 touch pxe-cloud-config-master.yml
 touch pxe-cloud-config-slave.yml
 ```
+
 pxe-cloud-config-master.yml
+
  ```
  #cloud-config
 ssh_authorized_keys:
