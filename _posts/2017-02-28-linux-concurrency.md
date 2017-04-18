@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nginx 四层负载均衡
-category: nginx
+category: haijieyang.github.io/nginx
 comments: false
 ---
 

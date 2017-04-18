@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux 使用代理
-category: proxy
+category: haijieyang.github.io/proxy
 comments: false
 ---
 

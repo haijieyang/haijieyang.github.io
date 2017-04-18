@@ -1,7 +1,7 @@
 ---
 layout: post
 title: docker build image tools
-category: docker
+category: haijieyang.github.io/docker
 comments: false
 ---
 
