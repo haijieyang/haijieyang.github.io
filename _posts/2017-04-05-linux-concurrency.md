@@ -5,7 +5,7 @@ category: docker
 comments: false
 ---
 
-### k8s build image tools
+### docker build image tools
 
 ---
 
