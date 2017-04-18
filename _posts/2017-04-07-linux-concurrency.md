@@ -1,7 +1,7 @@
 ---
 layout: post
 title: k8s学习篇六 
-category: haijieyang.github.io/k8s
+category: k8s
 comments: false
 ---
 

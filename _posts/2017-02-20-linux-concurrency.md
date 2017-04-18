@@ -1,7 +1,7 @@
 ---
 layout: post
 title: docker swarm 集群实例
-category: haijieyang.github.io/swarm
+category: swarm
 comments: false
 ---
 

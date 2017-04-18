@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux 正向代理
-category: haijieyang.github.io/proxy
+category: proxy
 comments: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: k8s 学习篇四
-category: haijieyang.github.io/k8s
+category: k8s
 comments: false
 ---
 
@@ -50,7 +50,7 @@ cd ./heapster/deploy/
 ```
 启动正常后几分钟就能看到cpu memory的状态了
 ```
-![kubernetes-dashboard](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/dashboard.png)
+![kubernetes-dashboard](https://raw.githubusercontent.com/haijieyang/master/images/dashboard.png)
 
 ------------------------------------
 ### grafana添加datasource
