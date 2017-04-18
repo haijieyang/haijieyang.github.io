@@ -5,6 +5,10 @@ category: k8s
 comments: false
 ---
 
+### k8s ssl auth
+
+---
+
   * ssl
   * k8s basic auth
   
