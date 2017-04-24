@@ -105,5 +105,5 @@ wget http://boot.ipxe.org/ipxe.iso -o ipxe.iso
 
 ```
 iPXE> dhcp
-iPXE> chain http://192.168.152.134:4777
+iPXE> chain http://192.168.152.134:4777?profile=development
 ```
