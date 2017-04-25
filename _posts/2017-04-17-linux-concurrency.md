@@ -88,7 +88,7 @@ export COREOS_IPXE_SERVER_BASE_URL="192.168.152.134:4777"
 ###### 1.7 ipxe-server  layout
 
 
-![ipxe-layout](https://raw.githubusercontent.com/haijieyang/master/images/ipxe.png)
+![ipxe-layout](https://raw.githubusercontent.com/haijieyang/haijieyang.github.io/master/images/ipxe.png)
 
 ---
 
