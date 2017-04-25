@@ -116,6 +116,10 @@ label coreos
 
 ```
 
+```
+ln -s 00:0c:29:c4:3a:2b coreos-node-master
+```
+
 vi /tftpboot/pxelinux.cfg/oreos-node-slave
 
 ```
@@ -131,7 +135,9 @@ label coreos
     append initrd=images/coreos/coreos_production_pxe_image.cpio.gz cloud-config-url=http://192.168.152.10/coreos/pxe-cloud-config-slave.yml console=tty0 console=ttyS0 coreos.autologin=tty1 coreos.autologin=ttyS0
 ```
 
-
+```
+ln -s d0:00:67:13:0d:01 coreos-node-slave
+```
 
 ---
 
