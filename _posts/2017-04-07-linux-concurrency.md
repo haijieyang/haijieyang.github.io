@@ -1,6 +1,6 @@
 ---
 layout: post
-title: k8s学习篇六 
+title: k8s 六安全认证
 category: k8s
 comments: false
 ---

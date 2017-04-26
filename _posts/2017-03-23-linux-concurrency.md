@@ -1,6 +1,6 @@
 ---
 layout: post
-title: k8s 学习篇二
+title: k8s 二dashboard
 category: k8s
 comments: false
 ---
