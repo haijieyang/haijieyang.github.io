@@ -41,20 +41,14 @@ curl -fsSL https://get.docker.com/| sh
 ### swarm集群配置
 
 ```
-    docker swarm init
+docker swarm init
 ```
 
 ### 获取join-token
 
 ```
-    docker swarm join-token worker
-    docker swarm join-token manager
-```
-
-### 加入节点
-
-```
-    根据join-token加入
+docker swarm join-token worker
+docker swarm join-token manager
 ```
 
 ------------------------------------
