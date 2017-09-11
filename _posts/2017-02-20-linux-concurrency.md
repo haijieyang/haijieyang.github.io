@@ -44,13 +44,6 @@ curl -fsSL https://get.docker.com/| sh
 docker swarm init
 ```
 
-### 获取join-token
-
-```
-docker swarm join-token worker
-docker swarm join-token manager
-```
-
 ------------------------------------
 
 #### swarm deploy app
