@@ -38,12 +38,6 @@ natively managing a cluster of Docker Engines called a swarm
 curl -fsSL https://get.docker.com/| sh
 ```
 
-### swarm集群配置
-
-```
-docker swarm init
-```
-
 ------------------------------------
 
 #### swarm deploy app
