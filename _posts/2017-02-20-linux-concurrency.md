@@ -40,17 +40,16 @@ curl -fsSL https://get.docker.com/| sh
 
 ### swarm集群配置
 
-docker swarm init
+    docker swarm init
 
+### 获取join-token
 
-    $ docker swarm init
-    Swarm initialized: current node (dxn1zf6l61qsb1josjja83ngz) is now a manager.
-    To add a worker to this swarm, run the following command:
-       docker swarm join \
-         --token SWMTKN-1-49nj1cmql0jkz5s954yi3oex3nedyz0fb0xx14ie39trti4wxv-8vxv8rssmk743ojnwacrr2e7c \
-       192.168.99.100:2377
-    To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+    docker swarm join-token worker  # worker角色
+    docker swarm join-token manager # manager角色
 
+### 加入节点
+
+    根据join-token加入
 
 ------------------------------------
 
@@ -104,6 +103,7 @@ docker-compose.yml
 ### 创建 
 
     docker stack deploy --compose-file  docker-compose.yml lnmp
+
 
 ### 滚动升级 
 
