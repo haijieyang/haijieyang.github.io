@@ -47,8 +47,8 @@ curl -fsSL https://get.docker.com/| sh
 ### 获取join-token
 
 ```
-    docker swarm join-token worker  # worker角色
-    docker swarm join-token manager # manager角色
+    docker swarm join-token worker
+    docker swarm join-token manager
 ```
 
 ### 加入节点
